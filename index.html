@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juneau Vacation Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        nav {
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .nav-right {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .back-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #0066ff;
+            text-decoration: none;
+            margin-bottom: 1rem;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 400px;
+        }
+
+        .main-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .side-images {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            gap: 0.5rem;
+        }
+
+        .side-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .tab {
+            padding: 1rem 0;
+            color: #666;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .tab.active {
+            color: #0066ff;
+        }
+
+        .tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #0066ff;
+        }
+
+        .property-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+        }
+
+        .property-type {
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .property-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .rating-score {
+            background: #2d6a4f;
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+        }
+
+        .actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            background: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .price-card {
+            background: #1a2238;
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .sign-in-btn {
+            background: #0066ff;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div>🌎 United States</div>
+        <div class="nav-right">
+            <a href="#" class="nav-link">Trip Boards</a>
+            <a href="#" class="nav-link">List your property</a>
+            <a href="#" class="nav-link">Help</a>
+            <a href="#" class="nav-link">My trips</a>
+            <a href="#" class="nav-link">Sign in</a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <a href="#" class="back-link">← See all properties</a>
+
+        <div class="image-grid">
+            <img src="/api/placeholder/800/600" alt="Deck view" class="main-image">
+            <div class="side-images">
+                <img src="/api/placeholder/400/300" alt="House exterior" class="side-image">
+                <img src="/api/placeholder/400/300" alt="Living room" class="side-image">
+            </div>
+        </div>
+
+        <div class="tabs">
+            <a href="#" class="tab active">Overview</a>
+            <a href="#" class="tab">Amenities</a>
+            <a href="#" class="tab">Policies</a>
+        </div>
+
+        <div class="property-header">
+            <div>
+                <div class="property-type">Entire home</div>
+                <h1 class="property-title">Juneau Vacation Home: Stunning View + Beach Access</h1>
+                <div class="rating">
+                    <span class="rating-score">9.8</span>
+                    <span>Exceptional</span>
+                    <a href="#" style="color: #0066ff; text-decoration: none;">See all 24 reviews</a>
+                </div>
+            </div>
+            <div class="actions">
+                <button class="btn">⎘ Share</button>
+                <button class="btn">♡ Save</button>
+            </div>
+        </div>
+
+        <div class="price-card">
+            <div>✧ Members get our best prices when signed in!</div>
+            <div class="price">$134 per night</div>
+            <a href="#" class="sign-in-btn">Sign in</a>
+        </div>
+    </main>
+</body>
+</html>
