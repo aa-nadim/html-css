@@ -21,14 +21,8 @@
     </nav>
 
     <main class="container">
-      <section
-        style="
-          margin-top: 20px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        "
-      >
+      <!-- for Desktop  -->
+      <section class="desktop-gallery-controls">
         <a href="#" class="back-link"> ← See all properties </a>
         <div class="actions">
           <button class="btn">⎘ Share</button>
@@ -36,7 +30,7 @@
         </div>
       </section>
 
-      <section>
+      <section class="desktop-image-gallery-section">
         <div class="image-grid">
           <img
             src="assets/1.png"
@@ -55,6 +49,45 @@
           </div>
         </div>
       </section>
+
+      <!-- for Mobile -->
+      <div class="mobile-gallery-container">
+        <a href="#" class="mobile-back-link">
+            <span>←</span>
+            View all properties
+        </a>
+        
+        <div class="mobile-gallery-controls">
+            <button class="mobile-control-button" aria-label="Share">
+                ↗
+            </button>
+            <button class="mobile-control-button" aria-label="Add to favorites">
+                ♡
+            </button>
+        </div>
+
+        <div class="mobile-image-gallery-section">
+            <div>
+                <img src="assets/2.png" alt="Property interior" class="mobile-gallery-image-1">
+            </div>
+            <div class="mobile-image-wrapper">
+                <img src="assets/3.png" alt="Property interior" class="mobile-gallery-image-2">
+            </div>
+        </div>
+        
+
+        <div class="mobile-dot-navigation">
+            <div class="mobile-dot"></div>
+            <div class="mobile-dot"></div>
+            <div class="mobile-dot mobile-dot-active"></div>
+            <div class="mobile-dot"></div>
+            <div class="mobile-dot"></div>
+        </div>
+
+        <div class="mobile-image-counter">
+            📷 31
+        </div>
+    </div>
       <section class="tabs">
         <a href="#" class="tab active">Overview</a>
         <a href="#" class="tab">Amenities</a>
