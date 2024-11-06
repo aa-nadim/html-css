@@ -611,7 +611,6 @@
     gap: 16px; 
     margin-bottom: 10px;
 }
-}
 
 .amenity-item {
   display: flex;
@@ -861,7 +860,7 @@
 
 .timeline-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 20px;
 }
 
@@ -873,21 +872,26 @@
 }
 
 .timeline-dot {
-  width: 10px;
-  height: 10px;
-  background: #000;
+  width: 15px;
+  height: 15px;
+  border: 2px solid black;
   border-radius: 50%;
   position: absolute;
-  top: -4px;
+  top: -7px;
 }
 
 .dot-start {
   left: 0;
+  background-color: black;
 }
 .dot-middle {
   left: 50%;
+  background-color: white;
+  border: 3px solid black;
 }
 .dot-end {
+  background-color: white;
+  border: 2px solid black;
   right: 0;
 }
 
@@ -1141,8 +1145,69 @@
   color: #1a1a1a;
   margin-top: 16px;
 }
+/* timeline */
+.mobile-timeline-viwe {
+  display: none;
+ }
+ 
 
-/* last part */
+@media (max-width: 768px) {
+  .desktop-timeline {
+    display: none;
+  }
+  .mobile-timeline-viwe {
+    display: block;
+  }
+  .mobile-timeline-viwe {
+      border: 2px solid black;
+      border-radius: 5px;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px 10px;
+  }
+  .mobile-timeline {
+      position: relative;
+  }
+
+  .mobile-timeline::after {
+      content: '';
+      position: absolute;
+      width: 2px;
+      background-color: #1a1a1a;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+
+  .mobile-timeline-item {
+      position: relative;
+      margin: 30px 0;
+  }
+
+  .mobile-timeline-dot {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 50%;
+      z-index: 1;
+  }
+
+  .mobile-timeline-date{
+      font-size: 18px;
+      color: #1a1a1a;
+      margin-left: 180px;
+      font-weight: 500;
+  }
+}
+ 
+
+
 .common-section-1{
     display: grid;
     grid-template-columns: 35% 65%;
@@ -1150,6 +1215,15 @@
 }
 .common-section-1-header{
     margin-left: 5px;
+}
+.refund-section{
+  display: grid;
+  grid-template-columns: 25% 75%;
+  margin: 20px 0;
+}
+.timeline-date{
+  display: flex;
+  justify-content: space-between;
 }
 @media (max-width: 768px) {
     .common-section-1 {

@@ -4,6 +4,8 @@ HTML\_&_CSS Assignment
 
 ## Overview
 
+The landing page features an apartment available for rent in Juneau, Alaska. It highlights essential details, including amenities, check-in and check-out times, and host information, along with images and a location map.
+
 ## Instructions
 
 1. **Clone the Repository:**
