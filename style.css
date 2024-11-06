@@ -1150,7 +1150,7 @@
   margin-top: 16px;
 }
 /* timeline */
-.mobile-timeline-viwe {
+.mobile-timeline-view {
   display: none;
  }
  
@@ -1159,21 +1159,19 @@
   .desktop-timeline {
     display: none;
   }
-  .mobile-timeline-viwe {
+  .mobile-timeline-view {
     display: block;
   }
-  .mobile-timeline-viwe {
-      border: 2px solid black;
-      border-radius: 5px;
-      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 5px 10px;
+  .mobile-timeline-view {
+    background:#f8f8f8;
+    padding:20px;
+    border-radius:12px;
+    margin:20px 0;
   }
   .mobile-timeline {
       position: relative;
+      padding-top: 10px; /* Adjust as needed */
+      padding-bottom: 10px; /* Adjust as needed */
   }
 
   .mobile-timeline::after {
@@ -1181,8 +1179,8 @@
       position: absolute;
       width: 2px;
       background-color: #1a1a1a;
-      top: 0;
-      bottom: 0;
+      top: 10px; /* Adjust based on dot size */
+      bottom: 10px; /* Adjust based on dot size */
       left: 50%;
       transform: translateX(-50%);
   }
@@ -1201,6 +1199,23 @@
       border-radius: 50%;
       z-index: 1;
   }
+
+  
+  .mobile-dot-start {
+    background-color: black;
+    margin-top: -30px;
+  }
+  .mobile-dot-middle {
+    background-color: white;
+    border: 3px solid black;
+  }
+  .mobile-dot-end {
+    background-color: white;
+    border: 2px solid black;
+    margin-top: 33px;
+  }
+
+  
 
   .mobile-timeline-date{
       font-size: 18px;
