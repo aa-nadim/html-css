@@ -1253,3 +1253,32 @@
         justify-content: center;
     }
 }
+
+
+.explore-title-section-book-now {
+  display: none;
+}
+.mobile-widget-container {
+  display: none;
+ }
+ 
+
+@media (max-width: 768px) {
+  .desktop-widget-container {
+    display: none;
+  }
+  .mobile-widget-container {
+    display: block; 
+    margin-bottom: 30px;
+  }
+
+  .explore-title-section {
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+
+  .explore-title-section-book-now {
+    display: block; 
+  }
+}
